@@ -10,28 +10,35 @@ import { Feed } from "./components/Feed";
 import { Network } from "./components/Network";
 import { Profile } from "./components/Profile";
 import { Messages } from "./components/Messages";
+import { ChatScreen } from "./components/ChatScreen";
 import { Opportunities } from "./components/Opportunities";
+import { CustomCursor } from "./components/CustomCursor";
 import { Footer } from "./components/Footer";
 
 function App() {
   return (
     <Router>
       <div className="App dark-theme">
+        <div className="bg-orb orb-1"></div>
+        <div className="bg-orb orb-2"></div>
+        <CustomCursor />
         <Navbar />
         <Routes>
-          <Route path="/" element={<Landing />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
+          <Route path="/" element={<><Landing /><Footer /></>} />
+          <Route path="/login" element={<><Login /><Footer /></>} />
+          <Route path="/signup" element={<><Signup /><Footer /></>} />
 
           <Route path="/dashboard" element={<DashboardLayout />}>
-            <Route index element={<Feed />} />
+            <Route index element={<Opportunities />} />
+            <Route path="feed" element={<Feed />} />
             <Route path="network" element={<Network />} />
             <Route path="opportunities" element={<Opportunities />} />
             <Route path="profile" element={<Profile />} />
-            <Route path="messages" element={<Messages />} />
+            <Route path="messages" element={<ChatScreen />} />
+            <Route path="chat/:userId" element={<ChatScreen />} />
+            <Route path="chat" element={<ChatScreen />} />
           </Route>
         </Routes>
-        <Footer />
       </div>
     </Router>
   );

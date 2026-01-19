@@ -7,9 +7,12 @@ export const DashboardLayout = () => {
     const location = useLocation();
 
     // Determine if current page should use full-width layout
-    const isFullWidth = location.pathname.includes('/network') ||
+    const isFullWidth = location.pathname === '/dashboard' ||
+        location.pathname.includes('/network') ||
         location.pathname.includes('/opportunities') ||
-        location.pathname.includes('/profile');
+        location.pathname.includes('/profile') ||
+        location.pathname.includes('/chat') ||
+        location.pathname.includes('/messages');
 
     if (isFullWidth) {
         return (

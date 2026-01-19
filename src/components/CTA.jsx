@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export const CTA = () => {
@@ -12,10 +13,10 @@ export const CTA = () => {
         <p className="cta-subtitle">
           Join thousands of professionals and students already making meaningful connections
         </p>
-        <button className="btn-primary cta-button">
+        <Link to="/dashboard" className="btn-primary cta-button">
           <span>Match X</span>
           <ArrowRight size={22} />
-        </button>
+        </Link>
       </div>
       <div className="cta-gradient"></div>
     </section>

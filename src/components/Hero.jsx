@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Spline from '@splinetool/react-spline';
 import { ArrowRight } from 'lucide-react';
 
@@ -11,27 +12,27 @@ export const Hero = () => {
             <span className="badge-dot"></span>
             <span>Powered by AI</span>
           </div>
-          
+
           <h1 className="hero-title">
             Connect. Match.<br />
             Build Your Network.
           </h1>
-          
+
           <p className="hero-subtitle">
-            Connect X is a smart social platform that helps you meet the right people 
+            Connect X is a smart social platform that helps you meet the right people
             for collaboration, opportunities, and growth.
           </p>
-          
+
           <div className="hero-ctas">
-            <button className="btn-primary hero-primary-btn">
+            <Link to="/dashboard" className="btn-primary hero-primary-btn">
               <span>Match X</span>
               <ArrowRight size={20} />
-            </button>
-            <button className="btn-secondary">
+            </Link>
+            <Link to="/dashboard/feed" className="btn-secondary">
               Explore Feed
-            </button>
+            </Link>
           </div>
-          
+
           <div className="hero-stats">
             <div className="stat-item">
               <div className="stat-value">50K+</div>
@@ -49,14 +50,14 @@ export const Hero = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="hero-right">
           <div className="spline-container">
             <Spline scene="https://prod.spline.design/NbVmy6DPLhY-5Lvg/scene.splinecode" />
           </div>
         </div>
       </div>
-      
+
       <div className="hero-gradient"></div>
     </section>
   );

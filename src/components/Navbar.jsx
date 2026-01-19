@@ -32,9 +32,9 @@ export const Navbar = () => {
 
               {/* Center Links */}
               <div className="nav-links-auth">
-                <Link to="/dashboard" className="nav-item active">Feed</Link>
-                <Link to="/dashboard/network" className="nav-item">Network</Link>
-                <Link to="/dashboard/opportunities" className="nav-item">Opportunities</Link>
+                <Link to="/dashboard" className={`nav-item ${location.pathname === '/dashboard' || location.pathname.includes('/opportunities') ? 'active' : ''}`}>Opportunities</Link>
+                <Link to="/dashboard/network" className={`nav-item ${location.pathname.includes('/dashboard/network') ? 'active' : ''}`}>Network</Link>
+                <Link to="/dashboard/feed" className={`nav-item ${location.pathname.includes('/dashboard/feed') ? 'active' : ''}`}>Feed</Link>
               </div>
 
               {/* Right User Actions */}
@@ -46,7 +46,7 @@ export const Navbar = () => {
                 <Link to="/dashboard/profile" className="icon-btn">
                   <User size={22} />
                 </Link>
-                <button className="btn-primary btn-small">Match X</button>
+                <Link to="/dashboard" className="btn-primary btn-small">Match X</Link>
               </div>
             </>
           ) : (
@@ -76,9 +76,9 @@ export const Navbar = () => {
           <div className="mobile-menu">
             {isAuthPage ? (
               <div className="mobile-links">
-                <Link to="/dashboard" className="mobile-link">Feed</Link>
-                <Link to="/dashboard/network" className="mobile-link">Network</Link>
-                <Link to="/dashboard/opportunities" className="mobile-link">Opportunities</Link>
+                <Link to="/dashboard" className="mobile-link" onClick={() => setIsOpen(false)}>Opportunities</Link>
+                <Link to="/dashboard/network" className="mobile-link" onClick={() => setIsOpen(false)}>Network</Link>
+                <Link to="/dashboard/feed" className="mobile-link" onClick={() => setIsOpen(false)}>Feed</Link>
                 <div className="mobile-divider"></div>
                 <Link to="/dashboard/messages" className="mobile-link" onClick={() => setIsOpen(false)}>Messages (3)</Link>
                 <Link to="/dashboard/profile" className="mobile-link" onClick={() => setIsOpen(false)}>Profile</Link>

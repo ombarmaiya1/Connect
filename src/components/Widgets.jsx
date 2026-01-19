@@ -1,5 +1,6 @@
 import React from 'react';
-import { Plus, TrendingUp } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Plus, TrendingUp, MessageCircle } from 'lucide-react';
 import { trendingTopics, suggestedUsers } from '../data/mockData';
 
 export const Widgets = () => {
@@ -34,9 +35,14 @@ export const Widgets = () => {
                                 <h4 className="suggestion-name">{user.name}</h4>
                                 <p className="suggestion-role">{user.role}</p>
                             </div>
-                            <button className="btn-icon-small">
-                                <Plus size={16} />
-                            </button>
+                            <div className="suggestion-actions">
+                                <button className="btn-icon-small">
+                                    <Plus size={16} />
+                                </button>
+                                <Link to={`/dashboard/chat/${user.id}`} className="btn-icon-small chat-trigger">
+                                    <MessageCircle size={16} />
+                                </Link>
+                            </div>
                         </div>
                     ))}
                 </div>

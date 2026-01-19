@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Search, SlidersHorizontal, MapPin, Github, Linkedin } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Search, SlidersHorizontal, MapPin, Github, Linkedin, MessageCircle } from 'lucide-react';
 import { possibleConnections } from '../data/mockData';
 
 export const Network = () => {
@@ -70,10 +71,16 @@ export const Network = () => {
                             </a>
                         </div>
 
-                        {/* Connect Button */}
-                        <button className="network-connect-btn">
-                            Connect
-                        </button>
+                        {/* Action Buttons */}
+                        <div className="network-card-actions">
+                            <button className="network-connect-btn">
+                                Connect
+                            </button>
+                            <Link to={`/dashboard/chat/${user.id}`} className="network-message-btn glass-btn">
+                                <MessageCircle size={18} />
+                                Message
+                            </Link>
+                        </div>
                     </div>
                 ))}
             </div>

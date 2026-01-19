@@ -108,19 +108,19 @@ export const trendingTopics = [
 
 export const suggestedUsers = [
     {
-        id: 1,
+        id: 101,
         name: 'Jackson',
         role: 'Developer',
         avatar: 'https://i.pravatar.cc/150?img=12'
     },
     {
-        id: 2,
+        id: 102,
         name: 'Samantha',
         role: 'Designer',
         avatar: 'https://i.pravatar.cc/150?img=13'
     },
     {
-        id: 3,
+        id: 103,
         name: 'Mike Taylor',
         role: 'Product Manager',
         avatar: 'https://i.pravatar.cc/150?img=14'
@@ -252,6 +252,53 @@ export const jobs = [
     }
 ];
 
+export const communityDiscussions = [
+    {
+        id: 1,
+        title: "Looking for React developers for AI chatbot project",
+        author: "Sarah Jenning",
+        college: "MIT",
+        year: "3rd Year",
+        time: "2 hours ago",
+        description: "Building an intelligent chatbot with GPT integration. Need frontend expertise!",
+        tags: ["React", "AI", "Frontend"],
+        likes: 45,
+        replies: 23,
+        match: 89,
+        isTrending: true,
+        avatar: "https://i.pravatar.cc/150?img=1"
+    },
+    {
+        id: 2,
+        title: "Fall Hackathon 2025 - Team Formation Thread",
+        author: "David Chen",
+        college: "Stanford",
+        year: "4th Year",
+        time: "5 hours ago",
+        description: "Who's ready for the biggest hackathon of the year? Let's team up!",
+        tags: ["Hackathon", "Cloud", "Python"],
+        likes: 124,
+        replies: 56,
+        match: 95,
+        isTrending: true,
+        avatar: "https://i.pravatar.cc/150?img=2"
+    }
+];
+
+export const topContributors = [
+    { id: 1, name: "Sarah Jenning", college: "MIT", posts: 234, avatar: "https://i.pravatar.cc/150?img=1" },
+    { id: 2, name: "David Chen", college: "Stanford", posts: 189, avatar: "https://i.pravatar.cc/150?img=2" },
+    { id: 3, name: "Om Barmaiya", college: "Bansal Institute", posts: 167, avatar: "https://i.pravatar.cc/150?img=3" },
+    { id: 4, name: "Aisha Patel", college: "IIT Bombay", posts: 145, avatar: "https://i.pravatar.cc/150?img=4" }
+];
+
+export const hubStats = [
+    { label: "Active Members", value: "2,847", icon: "Users" },
+    { label: "Discussions", value: "1,234", icon: "MessageSquare" },
+    { label: "Events", value: "47", icon: "Calendar" },
+    { label: "Projects Started", value: "389", icon: "Layout" }
+];
+
 export const projects = [];
 
 export const userProfile = {
@@ -311,6 +358,7 @@ export const conversations = [
     {
         id: 1,
         user: {
+            id: 1,
             name: "Sarah Chen",
             avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80",
             status: "online",
@@ -329,6 +377,7 @@ export const conversations = [
     {
         id: 2,
         user: {
+            id: 101,
             name: "Jackson Smith",
             avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80",
             status: "offline",
@@ -346,6 +395,7 @@ export const conversations = [
     {
         id: 3,
         user: {
+            id: 3,
             name: "Emma Wilson",
             avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80",
             status: "online",
@@ -357,5 +407,38 @@ export const conversations = [
         messages: [
             { id: 1, sender: "Emma Wilson", text: "Are we still meeting at 2 PM?", time: "Yesterday", isSelf: false }
         ]
+    }
+];
+
+export const communityEvents = [
+    {
+        id: 1,
+        title: 'Future of AI in Education',
+        organizer: 'Stanford Tech Group',
+        date: 'Oct 24, 2026 • 6:00 PM',
+        location: 'Virtual Event',
+        attendees: 1240,
+        image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80',
+        tags: ['AI', 'Education', 'Webinar']
+    },
+    {
+        id: 2,
+        title: 'Global Student Developers Meetup',
+        organizer: 'Google Student Clubs',
+        date: 'Nov 12, 2026 • 10:00 AM',
+        location: 'Mountain View, CA',
+        attendees: 850,
+        image: 'https://images.unsplash.com/photo-1540575861501-7ad0582373f5?auto=format&fit=crop&w=800&q=80',
+        tags: ['Networking', 'Coding', 'Meetup']
+    },
+    {
+        id: 3,
+        title: 'Tech Career Fair 2026',
+        organizer: 'Connect X Network',
+        date: 'Dec 05, 2026 • 9:00 AM',
+        location: 'London, UK',
+        attendees: 3500,
+        image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80',
+        tags: ['Careers', 'Tech', 'Exhibition']
     }
 ];
